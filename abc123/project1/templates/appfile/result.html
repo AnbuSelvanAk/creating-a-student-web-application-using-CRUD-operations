@@ -1,0 +1,30 @@
+<html>
+<style>
+	table{
+		border-color:white;}
+	th{
+		color:blue;
+	border-color:white;}</style>
+<center>
+<body>
+<h2 style="text-align:center;color:red">PRODUCT LIST</h2>
+<table border='2'>
+<thread>
+	<th>sno</th>
+	<th>sname</th>
+	<th>ssalary</th>
+	<th>saddress</th>
+</thread>
+{%for i in p%}
+<tr>
+	<td>{{i.sno}}</td>
+	<td>{{i.sname}}</td>
+	<td>{{i.ssalary}}</td>
+	<td>{{i.saddress}}</td>
+	<td><a href="/update/{{i.id}}">update</a>| <a href="/delete/{{i.id}}">delete</a></td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</center>
+
